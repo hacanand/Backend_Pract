@@ -1,0 +1,23 @@
+class Category{
+    constructor(c) {
+        this.categoryName = c;
+    }
+    getCategoryName() {
+        console.log("category is",this.categoryName);
+    }
+}
+class Product extends Category{
+    constructor(n, p, c) {
+        super(c)
+        this.name = n
+        this.price=p
+    }
+    display() {
+        console.log("details of the product are");
+        console.log("name", this.name);
+        console.log("price", this.price);
+        this.getCategoryName();
+    }
+}
+let p = new Product("iphone", 10000, "electronics")
+console.log(p)
